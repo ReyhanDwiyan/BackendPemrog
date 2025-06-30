@@ -4,8 +4,8 @@ import (
 	"inibackend/config/middleware"
 	"inibackend/handler"
 
-	"github.com/gofiber/swagger"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/swagger"
 )
 
 func SetupRoutes(app *fiber.App) {
@@ -14,7 +14,7 @@ func SetupRoutes(app *fiber.App) {
 	// Route untuk homepage
 	api.Get("/", handler.Homepage)
 
-	api.Get("/mahasiswa", middleware.Middlewares("admin"), handler.GetAllMahasiswa)
+	api.Get("/mahasiswa", handler.GetAllMahasiswa)
 
 	api.Get("/mahasiswa/:npm", middleware.Middlewares("admin"), handler.GetMahasiswaByNPM)
 
