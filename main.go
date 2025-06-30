@@ -42,8 +42,7 @@ func init() {
 // @contact.email indra@ulbi.ac.id
 
 // @BasePath /
-// @schemes http
-// @schemes https
+// @schemes http https
 
 // @securityDefinitions.apikey BearerAuth
 // @in header
