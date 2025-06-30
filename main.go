@@ -16,8 +16,8 @@ import (
 )
 
 func init() {
-	if _, err := os.Stat(".env"); err != nil {
-		err :=godotenv.Load()
+	if _, err := os.Stat(".env"); err == nil {
+		err := godotenv.Load()
 		if err != nil {
 			fmt.Println("gagal memuat file .env:")
 			} else{
